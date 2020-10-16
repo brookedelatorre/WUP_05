@@ -15,26 +15,18 @@ triUmpF = filter(triUmp,gender=="F")
 # Introduction
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?.  If you skimp in this section expect to be marked down in your grade. Paint a picture of the project a couple of paragraphs is expected!-->
-We are trying to show whether or not the drug is more effective at reducing the risk of contracting aids in females. The data comes from a categorical study named triUmp. This study shows various information connected to the individual such as their sexuality and whether they are a drug user or not. They also show who received the drug versus who received the placebo. 
-We are trying to pinpoint whether the drug would be more effective across the board indiscriminately or if it is effective to some niches more than others. Specifically this project will determine if the drug works for females or if it is ineffective; makes the infection rate worse. 
-
-$_H0$:Null Hypothesis is, there is no relationship between the infection of the one who receives the drug or placebo.    
-$_Ha$:Alternative Hypothesis is, that there is a relationship between the infection of the one who receives the drug or placebo.  
-
-A new  preventative aides drug (triUmpsal) is under test in clinical trials. Consider only the females, does this drug seem effective?  Hint - use dplyr to obtain that subpopulation with the filter command.
 
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
-I will be using the data manipulation of filtering triUmp to create triUmpF in order for it to only render Females in the data set.
-We will have to use a bar graph, chi squared, and a percentile table.
+
 
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
 ## Descriptive Results
-The drug appears that it is causing Females to contract aids at a higher rate. It is doing the opposite of its intended purpose.
+
 
 ### Graphical Descriptive Results
 
@@ -46,7 +38,6 @@ barchartGC(~infected + treatment,data=triUmpF, type="percent")
 
 ```    
    
-The bar chart shows that taking the drug vs. the placebo may have no effect.    
 
 ### Numerical Descriptive Results
 
@@ -67,10 +58,10 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
-We reject the null hypothesis, because  7.686e-05 < 0.05.
+
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 
-According to the tests it appears that the drug is doing the latter of its intended purpose. The bar graph shows when taking the drug the females were more likely to contract aids where as those who took the placebo did not contract at such a high rate.60% of the female who took the drug contracted aids as to where only 40% of females that took the placebo contracted aids. Those who tested negative for aids showed no significant difference between those who took the placebo and those who took the drug. Based on the chi squared test we conclude that 7.686e-05 is less than 0.05 which means that we reject the null hypothesis. Meaning that there is a relationship between the infection of the one who receives the drug of placebo.  
+ 
